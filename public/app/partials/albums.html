@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-12">
+		<a href="#/add" class="btn btn-primary">Add Album</a>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<div class="alert alert-warning" ng-if="!albums.data.length">
+			<p>No Albums To Show!</p>
+		</div>
+		<div class="list-group">
+			<a href="#/albums/{{album.id}}" class="list-group-item" ng-repeat="album in albums.data">
+				<h4 class="list-group-item-heading">{{ album.title }}</h4>
+				<p class="list-group-item-text">{{ album.artist }}</p>
+			</a>
+		</div>	
+	</div>
+</div>
